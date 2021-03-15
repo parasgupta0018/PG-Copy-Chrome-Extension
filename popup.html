@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>PG Mailer</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="padding: 10px;width: 280px;">
+        <nav class="navbar navbar-dark bg-dark justify-content-center">
+
+            <h3 class="navbar-brand" style="white-space: nowrap;padding: 0px;margin: 0px;"><img src="img/pgcopy-transparent.png" alt="PG Copy" width="100px" height="100px"><br/><u>Event Enabler</u></h3>
+            <h6 style="color: white;text-align: center;">(Select, Copy, Paste, Cut, ContextMenus, etc.)</h6>
+        </nav>
+        <div class="toggle-btn justify-content-center" id="toggle_btn" style="margin-left: 37%;">
+            <input type="checkbox" class="cb-value" id="toggle" />
+            <span class="round-btn"></span>
+        </div>
+        <h6 style="text-align: center;" id="btn_text">Click to enable all events.</h6>
+        <h5 class="note" id="note" style="display: none;">(Note: Switching to Default will reload the page)</h5>
+    </div>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+{
+    "name": "PG Copy",
+    "version": "1.0",
+    "description": "Allows you to copy from page where copy / selection is disabled",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "img/disabler.png",
+        "default_title": "PG Copy - Disabled"
+    },
+    "icons": {
+        "16": "img/ico.png",
+        "48": "img/pgcopy.png",
+        "128": "img/pgcopy128-disable.png"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+P",
+                "mac": "MacCtrl+Shift+P"
+            },
+            "description": "Opens popup.html"
+        }
+    },
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "js": ["jquery-3.6.0.min.js", "contentScript.js"],
+        "css": ["content.css"]
+    }],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "permissions": [
+        "https://*/*",
+        "storage",
+        "contextMenus",
+        "tabs"
+    ]
+}
